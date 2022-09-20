@@ -4,7 +4,9 @@
   "description": "my-app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "DISABLE_ESLINT_PLUGIN=true npm run build --prefix my-app",
+    "start": "cd my-app && npm run start",
+    "postinstall": "cd my-app && npm ci"
   },
   "repository": {
     "type": "git",
