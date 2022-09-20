@@ -1,15 +1,13 @@
 import React from 'react';
 import Square from './Square';
 
-const Board = (props) => {
+const Board = () => {
     const renderSquare = (i) => {
       return (
-      <Square 
-      value={props.squares[i]}
-      onClick={() => props.onClick(i)}
-      winline={props.winline}
+      <Square
+      key={i}
+      value={i}
       index={i}
-      cellIndex={props.cellIndex}
       />
       );
     };
@@ -23,7 +21,7 @@ const Board = (props) => {
         cols.push(col);
         count += 1;
       }
-      const row = <div className="board-row">{cols}</div>;
+      const row = <div key={i} className="board-row">{cols}</div>;
       rows.push(row);
     }
   

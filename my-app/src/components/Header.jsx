@@ -2,11 +2,12 @@ import React from 'react';
 import {
   Navbar, Container, Form,
 } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';;
 
 const Header = () => {
     const { t } = useTranslation();
     const { i18n } = useTranslation();
+    const lang = i18n.resolvedLanguage;
     const changeLanguage = (language) => {
       i18n.changeLanguage(language);
     };
@@ -19,9 +20,9 @@ const Header = () => {
             <Navbar.Brand href="/">{t('header.gameName')}</Navbar.Brand>
           </Navbar>
           <Navbar.Text>
-          <Form.Select size="sm">
-            <option onClick={() => changeLanguage('en')}>English</option>
-            <option onClick={() => changeLanguage('ru')} selected>Русский</option>
+          <Form.Select size="sm" defaultValue={lang}>
+            <option value="en" onClick={() => changeLanguage('en')}>English</option>
+            <option value="ru" onClick={() => changeLanguage('ru')}>Русский</option>
           </Form.Select>
           </Navbar.Text>
         </Container>
