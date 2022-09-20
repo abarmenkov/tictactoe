@@ -1,0 +1,19 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "my-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abarmenkov/tictactoe.git"
+  },
+  "author": "abarmenkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abarmenkov/tictactoe/issues"
+  },
+  "homepage": "https://github.com/abarmenkov/tictactoe#readme"
+}
