@@ -8,8 +8,9 @@ const Header = () => {
     const { t } = useTranslation();
     const { i18n } = useTranslation();
     const lang = i18n.resolvedLanguage;
-    const changeLanguage = (language) => {
-      i18n.changeLanguage(language);
+    const changeLanguage = (e) => {
+      e.preventDefault();
+      i18n.changeLanguage(e.target.value);
     };
 
     return (
@@ -20,9 +21,9 @@ const Header = () => {
             <Navbar.Brand href="/">{t('header.gameName')}</Navbar.Brand>
           </Navbar>
           <Navbar.Text>
-          <Form.Select size="sm" defaultValue={lang}>
-            <option value="en" onClick={() => changeLanguage('en')}>English</option>
-            <option value="ru" onClick={() => changeLanguage('ru')}>Русский</option>
+          <Form.Select size="sm" defaultValue={lang} onChange={changeLanguage}>
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
           </Form.Select>
           </Navbar.Text>
         </Container>
