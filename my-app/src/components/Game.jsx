@@ -61,8 +61,8 @@ if (calculation) {
       <>
         <Container className="d-flex justify-content-around mt-5">
               <Card className="shadow-sm" style={{ width: '16rem', height: '28rem', backgroundColor: 'lightgray'}}>
-                <Card.Body>
-                  <Card.Title style={{ textAlign: 'center' }} className="mb-2">
+                <Card.Body className="d-flex-row" style={{ textAlign: 'center' }}>
+                  <Card.Title className="mb-2">
                     <Restart />
                   </Card.Title>
                   <Card.Text as='div'>

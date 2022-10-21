@@ -1,14 +1,14 @@
 import React from 'react';
 import Square from './Square';
+import {
+  Row, Container
+} from 'react-bootstrap';
+import '../index.css';
 
 const Board = () => {
     const renderSquare = (i) => {
       return (
-      <Square
-      key={i}
-      value={i}
-      index={i}
-      />
+      <Square key={i} value={i} index={i} />
       );
     };
   
@@ -21,14 +21,14 @@ const Board = () => {
         cols.push(col);
         count += 1;
       }
-      const row = <div key={i} className="board-row">{cols}</div>;
+      const row = <Row key={i}>{cols}</Row>;
       rows.push(row);
     }
   
     return (
-      <div>
+      <Container>
       {rows}
-      </div>
+      </Container>
     );
   }
 

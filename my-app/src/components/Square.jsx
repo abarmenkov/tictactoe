@@ -2,6 +2,9 @@ import React, { useContext }from 'react';
 import '../index.css';
 import GameContext from '../context/GameContext';
 import calculateWinner from '../utils/calculateWinner';
+import {
+  Col
+} from 'react-bootstrap';
 
 
 const Square = (props) => {
@@ -37,13 +40,13 @@ const Square = (props) => {
 
 
     const style = winline &&  winline.includes(props.index) ? {color: 'red', backgroundColor: 'pink'} : props.index === current.cellIndex ? {color: 'blue', backgroundColor: 'yellow'} : {color: 'black', backgroundColor: 'yellow'};
+
       return (
-        <button key={props.index}
-        className="square" 
+        <Col as='button' className='square' key={props.index}
         onClick={() => handleClick(props.value)}
         style={style}>
           {squares[props.value]}
-        </button>
+        </Col>
       );
     }
 

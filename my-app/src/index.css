@@ -23,12 +23,12 @@ ol, ul {
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 75px;
+  height: 3.5rem;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 75px;
+  width: 2.5rem;
 }
 
 .square:focus {
@@ -47,4 +47,9 @@ ol, ul {
 .game-info {
   margin-left: 20px;
 }
+/*.container-board {
+  border: solid 2px #000;
+  grid-template-columns: 8em auto auto;
+  grid-template-rows: auto 4.5em auto;
+}*/
 
